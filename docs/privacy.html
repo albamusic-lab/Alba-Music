@@ -1,77 +1,188 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
   <title>Politique de confidentialité – Alba Music</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, sans-serif;
-      line-height: 1.6;
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      color: #222;
+    :root{
+      --bg:#0b0c10;
+      --card:#15161d;
+      --text:#e8eaef;
+      --muted:#b5b8c3;
+      --accent:#f5c518; /* jaune style "badge" */
+      --chip:#20222b;
+      --link:#c9d8ff;
     }
-    h1, h2 { line-height: 1.3; margin-top: 1.5em; }
-    .meta { color: #555; font-size: .95rem; }
-    .card { background: #f7f7f8; padding: 1rem; border-radius: 8px; margin: 1rem 0; }
-    a { color: #0056b3; text-decoration: none; }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,system-ui,"Helvetica Neue","Noto Sans","Apple Color Emoji","Segoe UI Emoji",sans-serif;
+      color:var(--text);
+      background:var(--bg);
+    }
+    .wrap{max-width:920px;margin:20px auto;padding:0 16px 40px}
+    h1{font-size:28px;margin:8px 0 12px}
+    .topline{color:var(--muted);font-size:14px}
+    .badge{display:inline-block;background:var(--chip);color:var(--text);border:1px solid #2a2c36;
+           padding:2px 8px;border-radius:10px;font-size:12px;margin-left:8px}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* Sommaire */
+    .toc{
+      display:flex;flex-wrap:wrap;gap:10px;
+      background:var(--card);border-radius:14px;padding:14px 12px;margin:18px 0 22px;
+    }
+    .toc a{padding:6px 10px;border-radius:10px;background:transparent;border:1px solid #2a2c36;color:var(--text)}
+    .toc a:active{background:#1d2029}
+
+    /* Cartes */
+    .card{
+      background:var(--card);
+      border-radius:16px;
+      padding:18px 16px;
+      margin:14px 0;
+      box-shadow:0 0 0 1px #20222c inset;
+    }
+    .card h2{
+      font-size:20px;margin:0 0 10px;color:var(--accent);letter-spacing:.2px;
+    }
+    .muted{color:var(--muted)}
+    ul{margin:8px 0 0 18px}
+    li{margin:4px 0}
+    .chip{
+      display:inline-block;border:1px solid #2a2c36;background:var(--chip);
+      padding:2px 8px;border-radius:999px;font-size:12px;color:var(--text)
+    }
+    footer{color:var(--muted);text-align:left;margin-top:18px}
   </style>
 </head>
 <body>
-  <h1>Politique de confidentialité – Alba Music</h1>
-  <p class="meta">Dernière mise à jour : 19 August 2025</p>
+  <main class="wrap">
+    <header>
+      <h1>Politique de confidentialité – Alba Music <span class="badge">v1.0</span></h1>
+      <div class="topline">Dernière mise à jour : <strong>19 août 2025</strong> • Application : <strong>Alba Music</strong> • Éditeur : <strong>S.Alba</strong></div>
+      <div class="topline">Contact : <a href="mailto:s.alba.music.officiel@gmail.com">s.alba.music.officiel@gmail.com</a></div>
+    </header>
 
-  <div class="card">
-    <p>
-      <strong>Application :</strong> <em>Alba Music</em><br>
-      <strong>Éditeur (compte développeur Google Play) :</strong> <em>S.Alba</em><br>
-      <strong>Contact :</strong>
-      <a href="mailto:s.alba.music.officiel@gmail.com">s.alba.music.officiel@gmail.com</a>
-    </p>
-  </div>
+    <!-- Sommaire -->
+    <nav class="toc" aria-label="Sommaire">
+      <a href="#objet">1. Objet</a>
+      <a href="#donnees">2. Données collectées</a>
+      <a href="#usage">3. Utilisation</a>
+      <a href="#partage">4. Partage</a>
+      <a href="#paiements">5. Paiements</a>
+      <a href="#conservation">6. Conservation</a>
+      <a href="#securite">7. Sécurité</a>
+      <a href="#droits">8. Vos droits</a>
+      <a href="#notifications">9. Notifications</a>
+      <a href="#promo">10. Promotion & réseaux</a>
+      <a href="#modifs">11. Modifications</a>
+      <a href="#contact">12. Contact</a>
+    </nav>
 
-  <h2>1. Objet</h2>
-  <p>La présente politique explique comment l’application <strong>Alba Music</strong> (ci-après « l’App ») collecte et utilise les informations des utilisateurs. Elle s’applique à toutes les fonctionnalités de l’App.</p>
+    <section id="objet" class="card">
+      <h2>1. Objet</h2>
+      <p>La présente politique décrit comment l’application <strong>Alba Music</strong> (ci‑après « l’App ») collecte, utilise et protège vos données personnelles.</p>
+    </section>
 
-  <h2>2. Données que nous traitons</h2>
-  <ul>
-    <li><strong>Compte utilisateur :</strong> création/connexion via Firebase Authentication (adresse e-mail et identifiants chiffrés).</li>
-    <li><strong>Contenu généré :</strong> messages publiés dans la discussion (stockés dans Firebase Realtime Database).</li>
-    <li><strong>Achat intégré :</strong> informations techniques liées aux achats gérés par Google Play (aucune donnée bancaire n’est stockée par Alba Music).</li>
-    <li><strong>Données techniques :</strong> logs nécessaires au fonctionnement (identifiants d’appareil fournis par Google/Firebase, horodatages, erreurs).</li>
-  </ul>
+    <section id="donnees" class="card">
+      <h2>2. Données collectées</h2>
+      <ul>
+        <li><strong>Compte & authentification</strong> (Firebase Auth) : email, mot de passe (haché), surnom de fan.</li>
+        <li><strong>Paroles officielles</strong> : nom, prénom, adresse postale et numéro de téléphone (uniquement pour la gestion des commandes), texte soumis, options de dédicace.</li>
+        <li><strong>Formulaire « Nous contacter »</strong> : nom, prénom, email, téléphone (optionnel), message.</li>
+        <li><strong>Espace fans (discussion)</strong> : messages, likes, surnom.</li>
+        <li><strong>Données techniques</strong> : identifiants techniques, version Android, statistiques d’usage anonymisées.</li>
+      </ul>
+      <p class="muted">Aucune donnée bancaire n’est collectée directement par l’App.</p>
+    </section>
 
-  <h2>3. Finalités</h2>
-  <ul>
-    <li>Permettre l’authentification et l’accès au compte.</li>
-    <li>Publier et afficher les messages de la discussion.</li>
-    <li>Traiter les achats intégrés et gérer les droits d’accès à la bibliothèque.</li>
-    <li>Assurer la sécurité, la prévention de fraude et l’amélioration du service.</li>
-  </ul>
+    <section id="usage" class="card">
+      <h2>3. Utilisation des données</h2>
+      <ul>
+        <li>Fournir et améliorer les fonctionnalités (compte, discussion, VIP, « Paroles officielles », hub musical, gagnants).</li>
+        <li>Traiter les commandes de « Paroles officielles » (contact, livraison numérique, facture si nécessaire).</li>
+        <li>Envoyer des notifications (si vous y avez consenti dans Android).</li>
+        <li>Assurer la sécurité, prévenir la fraude et répondre aux obligations légales.</li>
+      </ul>
+    </section>
 
-  <h2>4. Fondements juridiques (RGPD)</h2>
-  <ul>
-    <li><strong>Exécution du contrat :</strong> fournir les fonctionnalités de l’App (compte, discussion, achats).</li>
-    <li><strong>Intérêt légitime :</strong> sécurité, lutte contre les abus, statistiques de fonctionnement non profilantes.</li>
-    <li><strong>Obligations légales :</strong> conservation limitée de certaines informations (facturation via Google Play).</li>
-  </ul>
+    <section id="partage" class="card">
+      <h2>4. Partage des données</h2>
+      <p>Vos données ne sont <strong>jamais revendues</strong>. Elles peuvent être partagées avec :</p>
+      <div class="card">
+        <p><strong>Firebase (Google)</strong><br/>Auth, Firestore, Realtime Database, Cloud Messaging.</p>
+      </div>
+      <div class="card">
+        <p><strong>Google Play</strong><br/>achats in‑app (Store Digital / Bandcamp redirigé hors app).</p>
+      </div>
+      <div class="card">
+        <p><strong>PayPal</strong><br/>pour « Paroles officielles ».</p>
+      </div>
+      <div class="card">
+        <p><strong>Leetchi</strong><br/>pour les dons.</p>
+      </div>
+      <p class="muted">Ces tiers appliquent leurs propres politiques de confidentialité et normes de sécurité.</p>
+    </section>
 
-  <h2>5. Partage et sous-traitants</h2>
-  <p>Nous ne vendons pas vos données. Nous les confions uniquement à des prestataires indispensables au service :</p>
-  <ul>
-    <li><strong>Google Firebase</strong> (hébergement, authentification, base de données)</li>
-    <li><strong>Google Play</strong> (gestion des paiements in-app)</li>
-  </ul>
-  <p>Ces prestataires agissent en qualité de sous-traitants et appliquent leurs propres mesures de sécurité.</p>
+    <section id="paiements" class="card">
+      <h2>5. Paiements</h2>
+      <ul>
+        <li><strong>Store Digital / Boutique</strong> : géré officiellement via Bandcamp / Play Store selon le cas (traitement sur plateforme externe).</li>
+        <li><strong>Paroles officielles</strong> : paiement via PayPal.</li>
+        <li><strong>Donations</strong> : effectuées via Leetchi.</li>
+      </ul>
+      <p class="muted">Les informations de paiement sont traitées par ces prestataires : l’App ne stocke ni n’accède aux coordonnées bancaires.</p>
+    </section>
 
-  <h2>6. Conservation</h2>
-  <ul>
-    <li>Données de compte : conservées tant que le compte est actif.</li>
-    <li>Messages de discussion : conservés jusqu’à suppression par l’utilisateur ou modération.</li>
-    <li>Journaux techniques : conservés pour une durée limitée nécessaire à la sécurité et au diagnostic.</li>
-  </ul>
+    <section id="conservation" class="card">
+      <h2>6. Conservation</h2>
+      <ul>
+        <li><strong>Données de compte</strong> : conservées tant que le compte est actif.</li>
+        <li><strong>Commandes « Paroles officielles »</strong> : conservées le temps nécessaire au suivi légal et contractuel.</li>
+        <li><strong>Messages (fans)</strong> : jusqu’à suppression par l’utilisateur ou modération.</li>
+        <li><strong>Données techniques anonymisées</strong> : à des fins de statistiques.</li>
+      </ul>
+    </section>
 
-  <h2>7. Sécurité</h2>
-  <p>Les données sont chiffrées en transit ( 
+    <section id="securite" class="card">
+      <h2>7. Sécurité</h2>
+      <p>Les services Firebase (Google Cloud) assurent l’hébergement et la sécurité des données. L’App utilise HTTPS, des règles de sécurité Firestore/RTDB, et l’authentification Firebase.</p>
+    </section>
+
+    <section id="droits" class="card">
+      <h2>8. Vos droits (RGPD)</h2>
+      <ul>
+        <li><strong>Accès</strong> à vos données, <strong>rectification</strong>, <strong>suppression</strong> de compte.</li>
+        <li><strong>Opposition</strong> à certaines utilisations (ex. notifications).</li>
+      </ul>
+      <p>Contactez : <a href="mailto:s.alba.music.officiel@gmail.com">s.alba.music.officiel@gmail.com</a>.</p>
+    </section>
+
+    <section id="notifications" class="card">
+      <h2>9. Notifications</h2>
+      <p>Les notifications (Firebase Cloud Messaging) sont optionnelles. Vous pouvez les désactiver depuis les réglages Android
+        (<span class="chip">Paramètres &gt; Notifications</span>).</p>
+    </section>
+
+    <section id="promo" class="card">
+      <h2>10. Promotion &amp; réseaux</h2>
+      <p>Nous pouvons présenter l’App et proposer des tests à la communauté via nos réseaux sociaux officiels (Instagram, TikTok, Facebook, YouTube). Aucun compte social n’est requis pour utiliser l’App.</p>
+    </section>
+
+    <section id="modifs" class="card">
+      <h2>11. Modifications</h2>
+      <p>La présente politique peut être mise à jour. La date ci‑dessus sera modifiée et la nouvelle version sera publiée dans l’App.</p>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>12. Contact</h2>
+      <p>Pour toute question ou demande relative à la confidentialité : <a href="mailto:s.alba.music.officiel@gmail.com">s.alba.music.officiel@gmail.com</a>.</p>
+    </section>
+
+    <footer>© 2025 – Alba Music. Tous droits réservés.</footer>
+  </main>
+</body>
+</html> 
