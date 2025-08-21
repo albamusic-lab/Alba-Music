@@ -10,7 +10,7 @@
       --card:#15161d;
       --text:#e8eaef;
       --muted:#b5b8c3;
-      --accent:#f5c518; /* jaune style "badge" */
+      --accent:#f5c518;
       --chip:#20222b;
       --link:#c9d8ff;
     }
@@ -28,16 +28,12 @@
            padding:2px 8px;border-radius:10px;font-size:12px;margin-left:8px}
     a{color:var(--link);text-decoration:none}
     a:hover{text-decoration:underline}
-
-    /* Sommaire */
     .toc{
       display:flex;flex-wrap:wrap;gap:10px;
       background:var(--card);border-radius:14px;padding:14px 12px;margin:18px 0 22px;
     }
     .toc a{padding:6px 10px;border-radius:10px;background:transparent;border:1px solid #2a2c36;color:var(--text)}
     .toc a:active{background:#1d2029}
-
-    /* Cartes */
     .card{
       background:var(--card);
       border-radius:16px;
@@ -45,9 +41,7 @@
       margin:14px 0;
       box-shadow:0 0 0 1px #20222c inset;
     }
-    .card h2{
-      font-size:20px;margin:0 0 10px;color:var(--accent);letter-spacing:.2px;
-    }
+    .card h2{font-size:20px;margin:0 0 10px;color:var(--accent);letter-spacing:.2px}
     .muted{color:var(--muted)}
     ul{margin:8px 0 0 18px}
     li{margin:4px 0}
@@ -59,130 +53,147 @@
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <header>
-      <h1>Politique de confidentialité – Alba Music <span class="badge">v1.0</span></h1>
-      <div class="topline">Dernière mise à jour : <strong>19 août 2025</strong> • Application : <strong>Alba Music</strong> • Éditeur : <strong>S.Alba</strong></div>
-      <div class="topline">Contact : <a href="mailto:s.alba.music.officiel@gmail.com">s.alba.music.officiel@gmail.com</a></div>
-    </header>
+<main class="wrap">
+  <header>
+    <h1>Politique de confidentialité – Alba Music <span class="badge">v1.2</span></h1>
+    <div class="topline">Dernière mise à jour : <strong>21 août 2025</strong> • Application : <strong>Alba Music</strong> • Éditeur : <strong>S.Alba</strong></div>
+    <div class="topline">Contact : <a href="mailto:s.alba.music.officiel@gmail.com">s.alba.music.officiel@gmail.com</a></div>
+  </header>
 
-    <!-- Sommaire -->
-    <nav class="toc" aria-label="Sommaire">
-      <a href="#objet">1. Objet</a>
-      <a href="#donnees">2. Données collectées</a>
-      <a href="#usage">3. Utilisation</a>
-      <a href="#partage">4. Partage</a>
-      <a href="#paiements">5. Paiements</a>
-      <a href="#conservation">6. Conservation</a>
-      <a href="#securite">7. Sécurité</a>
-      <a href="#droits">8. Vos droits</a>
-      <a href="#notifications">9. Notifications</a>
-      <a href="#promo">10. Promotion & réseaux</a>
-      <a href="#modifs">11. Modifications</a>
-      <a href="#contact">12. Contact</a>
-    </nav>
+  <!-- Sommaire -->
+  <nav class="toc" aria-label="Sommaire">
+    <a href="#objet">1. Objet</a>
+    <a href="#donnees">2. Données collectées</a>
+    <a href="#usage">3. Utilisation</a>
+    <a href="#partage">4. Partage</a>
+    <a href="#paiements">5. Paiements</a>
+    <a href="#conservation">6. Conservation</a>
+    <a href="#securite">7. Sécurité</a>
+    <a href="#droits">8. Vos droits</a>
+    <a href="#notifications">9. Notifications</a>
+    <a href="#publicite">10. Publicité (AdMob)</a>
+    <a href="#promo">11. Promotion & réseaux</a>
+    <a href="#modifs">12. Modifications</a>
+    <a href="#contact">13. Contact</a>
+  </nav>
 
-    <section id="objet" class="card">
-      <h2>1. Objet</h2>
-      <p>La présente politique décrit comment l’application <strong>Alba Music</strong> (ci‑après « l’App ») collecte, utilise et protège vos données personnelles.</p>
-    </section>
+  <section id="objet" class="card">
+    <h2>1. Objet</h2>
+    <p>La présente politique décrit comment l’application <strong>Alba Music</strong> (ci‑après « l’App ») collecte, utilise et protège vos données personnelles.</p>
+  </section>
 
-    <section id="donnees" class="card">
-      <h2>2. Données collectées</h2>
-      <ul>
-        <li><strong>Compte & authentification</strong> (Firebase Auth) : email, mot de passe (haché), surnom de fan.</li>
-        <li><strong>Paroles officielles</strong> : nom, prénom, adresse postale et numéro de téléphone (uniquement pour la gestion des commandes), texte soumis, options de dédicace.</li>
-        <li><strong>Formulaire « Nous contacter »</strong> : nom, prénom, email, téléphone (optionnel), message.</li>
-        <li><strong>Espace fans (discussion)</strong> : messages, likes, surnom.</li>
-        <li><strong>Données techniques</strong> : identifiants techniques, version Android, statistiques d’usage anonymisées.</li>
-      </ul>
-      <p class="muted">Aucune donnée bancaire n’est collectée directement par l’App.</p>
-    </section>
+  <section id="donnees" class="card">
+    <h2>2. Données collectées</h2>
+    <ul>
+      <li><strong>Compte & authentification</strong> (Firebase Auth) : email, mot de passe (haché), surnom de fan.</li>
+      <li><strong>Paroles officielles</strong> : nom, prénom, adresse postale et numéro de téléphone (pour la gestion des commandes), texte soumis, options de dédicace.</li>
+      <li><strong>Formulaire « Nous contacter »</strong> : nom, prénom, email, téléphone (optionnel), message.</li>
+      <li><strong>Espace fans (discussion)</strong> : messages, likes, surnom.</li>
+      <li><strong>Données techniques</strong> : identifiants techniques, version Android, statistiques d’usage anonymisées.</li>
+    </ul>
+    <p class="muted">Aucune donnée bancaire n’est collectée directement par l’App.</p>
+  </section>
 
-    <section id="usage" class="card">
-      <h2>3. Utilisation des données</h2>
-      <ul>
-        <li>Fournir et améliorer les fonctionnalités (compte, discussion, VIP, « Paroles officielles », hub musical, gagnants).</li>
-        <li>Traiter les commandes de « Paroles officielles » (contact, livraison numérique, facture si nécessaire).</li>
-        <li>Envoyer des notifications (si vous y avez consenti dans Android).</li>
-        <li>Assurer la sécurité, prévenir la fraude et répondre aux obligations légales.</li>
-      </ul>
-    </section>
+  <section id="usage" class="card">
+    <h2>3. Utilisation des données</h2>
+    <ul>
+      <li>Fournir et améliorer les fonctionnalités (compte, discussion, VIP, « Paroles officielles », hub musical, gagnants).</li>
+      <li>Traiter les commandes de « Paroles officielles » (contact, livraison numérique, facture si nécessaire).</li>
+      <li>Envoyer des notifications (si vous y avez consenti dans Android).</li>
+      <li>Assurer la sécurité, prévenir la fraude et répondre aux obligations légales.</li>
+    </ul>
+  </section>
 
-    <section id="partage" class="card">
-      <h2>4. Partage des données</h2>
-      <p>Vos données ne sont <strong>jamais revendues</strong>. Elles peuvent être partagées avec :</p>
-      <div class="card">
-        <p><strong>Firebase (Google)</strong><br/>Auth, Firestore, Realtime Database, Cloud Messaging.</p>
-      </div>
-      <div class="card">
-        <p><strong>Google Play</strong><br/>achats in‑app (Store Digital / Bandcamp redirigé hors app).</p>
-      </div>
-      <div class="card">
-        <p><strong>PayPal</strong><br/>pour « Paroles officielles ».</p>
-      </div>
-      <div class="card">
-        <p><strong>Leetchi</strong><br/>pour les dons.</p>
-      </div>
-      <p class="muted">Ces tiers appliquent leurs propres politiques de confidentialité et normes de sécurité.</p>
-    </section>
+  <section id="partage" class="card">
+    <h2>4. Partage des données</h2>
+    <p>Vos données ne sont <strong>jamais revendues</strong>. Elles peuvent être partagées avec :</p>
+    <div class="card">
+      <p><strong>Firebase (Google)</strong><br/>Auth, Firestore, Realtime Database, Cloud Messaging.</p>
+    </div>
+    <div class="card">
+      <p><strong>Google Play</strong><br/>gestion des <strong>achats in‑app</strong> (notamment pour les « Paroles officielles ») et traitement sécurisé des paiements.</p>
+    </div>
+    <div class="card">
+      <p><strong>Leetchi</strong><br/>pour les dons.</p>
+    </div>
+    <p class="muted">Ces tiers appliquent leurs propres politiques de confidentialité et normes de sécurité.</p>
+  </section>
 
-    <section id="paiements" class="card">
-      <h2>5. Paiements</h2>
-      <ul>
-        <li><strong>Store Digital / Boutique</strong> : géré officiellement via Bandcamp / Play Store selon le cas (traitement sur plateforme externe).</li>
-        <li><strong>Paroles officielles</strong> : paiement via PayPal.</li>
-        <li><strong>Donations</strong> : effectuées via Leetchi.</li>
-      </ul>
-      <p class="muted">Les informations de paiement sont traitées par ces prestataires : l’App ne stocke ni n’accède aux coordonnées bancaires.</p>
-    </section>
+  <section id="paiements" class="card">
+    <h2>5. Paiements</h2>
+    <ul>
+      <li><strong>Store Digital / Boutique</strong> : géré officiellement via Bandcamp / Play Store selon le cas (traitement sur plateforme externe).</li>
+      <li><strong>Paroles officielles</strong> : paiement effectué directement via <strong>Google Play (achats intégrés à l’application)</strong>. L’App ne traite ni ne stocke les coordonnées bancaires.</li>
+      <li><strong>Donations</strong> : effectuées via Leetchi.</li>
+    </ul>
+    <p class="muted">Les informations de paiement sont traitées par ces prestataires ; l’App n’accède pas aux numéros de carte ou comptes bancaires.</p>
+  </section>
 
-    <section id="conservation" class="card">
-      <h2>6. Conservation</h2>
-      <ul>
-        <li><strong>Données de compte</strong> : conservées tant que le compte est actif.</li>
-        <li><strong>Commandes « Paroles officielles »</strong> : conservées le temps nécessaire au suivi légal et contractuel.</li>
-        <li><strong>Messages (fans)</strong> : jusqu’à suppression par l’utilisateur ou modération.</li>
-        <li><strong>Données techniques anonymisées</strong> : à des fins de statistiques.</li>
-      </ul>
-    </section>
+  <section id="conservation" class="card">
+    <h2>6. Conservation</h2>
+    <ul>
+      <li><strong>Données de compte</strong> : conservées tant que le compte est actif.</li>
+      <li><strong>Commandes « Paroles officielles »</strong> : conservées le temps nécessaire au suivi légal et contractuel.</li>
+      <li><strong>Messages (fans)</strong> : jusqu’à suppression par l’utilisateur ou modération.</li>
+      <li><strong>Données techniques anonymisées</strong> : à des fins de statistiques.</li>
+    </ul>
+  </section>
 
-    <section id="securite" class="card">
-      <h2>7. Sécurité</h2>
-      <p>Les services Firebase (Google Cloud) assurent l’hébergement et la sécurité des données. L’App utilise HTTPS, des règles de sécurité Firestore/RTDB, et l’authentification Firebase.</p>
-    </section>
+  <section id="securite" class="card">
+    <h2>7. Sécurité</h2>
+    <p>Les services Firebase (Google Cloud) assurent l’hébergement et la sécurité des données. L’App utilise HTTPS, des règles de sécurité Firestore/RTDB, et l’authentification Firebase.</p>
+  </section>
 
-    <section id="droits" class="card">
-      <h2>8. Vos droits (RGPD)</h2>
-      <ul>
-        <li><strong>Accès</strong> à vos données, <strong>rectification</strong>, <strong>suppression</strong> de compte.</li>
-        <li><strong>Opposition</strong> à certaines utilisations (ex. notifications).</li>
-      </ul>
-      <p>Contactez : <a href="mailto:s.alba.music.officiel@gmail.com">s.alba.music.officiel@gmail.com</a>.</p>
-    </section>
+  <section id="droits" class="card">
+    <h2>8. Vos droits (RGPD)</h2>
+    <ul>
+      <li><strong>Accès</strong> à vos données, <strong>rectification</strong>, <strong>suppression</strong> de compte.</li>
+      <li><strong>Opposition</strong> à certaines utilisations (ex. notifications, publicité personnalisée).</li>
+    </ul>
+    <p>Contactez : <a href="mailto:s.alba.music.officiel@gmail.com">s.alba.music.officiel@gmail.com</a>.</p>
+  </section>
 
-    <section id="notifications" class="card">
-      <h2>9. Notifications</h2>
-      <p>Les notifications (Firebase Cloud Messaging) sont optionnelles. Vous pouvez les désactiver depuis les réglages Android
-        (<span class="chip">Paramètres &gt; Notifications</span>).</p>
-    </section>
+  <section id="notifications" class="card">
+    <h2>9. Notifications</h2>
+    <p>Les notifications (Firebase Cloud Messaging) sont optionnelles. Vous pouvez les désactiver depuis les réglages Android
+      (<span class="chip">Paramètres &gt; Notifications</span>).</p>
+  </section>
 
-    <section id="promo" class="card">
-      <h2>10. Promotion &amp; réseaux</h2>
-      <p>Nous pouvons présenter l’App et proposer des tests à la communauté via nos réseaux sociaux officiels (Instagram, TikTok, Facebook, YouTube). Aucun compte social n’est requis pour utiliser l’App.</p>
-    </section>
+  <section id="publicite" class="card">
+    <h2>10. Publicité (AdMob)</h2>
+    <p>Nous affichons des bannières publicitaires via le <strong>Google Mobile Ads SDK (AdMob)</strong>. À ce titre, Google peut traiter :</p>
+    <ul>
+      <li><strong>ID publicitaire Android (AAID)</strong> et informations de l’appareil (modèle, version, identifiants techniques) ;</li>
+      <li><strong>informations de diffusion</strong> (impressions, clics, erreurs) ;</li>
+      <li><strong>approx. localisation</strong> déduite (ex. via adresse IP) pour la diffusion et la lutte contre la fraude.</li>
+    </ul>
+    <p><strong>Personnalisation</strong> : selon votre région et vos choix, les annonces peuvent être <em>personnalisées</em> ou <em>non personnalisées</em>. Vous pouvez :</p>
+    <ul>
+      <li>réinitialiser/limiter l’ID pub dans Android : <span class="chip">Paramètres &gt; Google &gt; Annonces</span> ;</li>
+      <li>refuser la personnalisation via les réglages d’Android ou, le cas échéant, via l’écran de consentement dans l’App (cadre UMP pour l’UE/EEE) ;</li>
+      <li>garder uniquement des annonces non personnalisées si vous l’avez choisi ou si la loi l’exige.</li>
+    </ul>
+    <p><strong>Consentement (UE/EEE)</strong> : lorsque requis par le RGPD, un <em>formulaire de consentement</em> peut apparaître au premier lancement pour choisir le type d’annonces (personnalisées / non personnalisées) et les finalités. Vous pouvez modifier ce choix ultérieurement dans les réglages d’Android.</p>
+    <p><strong>Limite d’âge</strong> : l’App ne s’adresse pas aux enfants de moins de 13 ans. Nous n’activons pas de ciblage “enfants”.</p>
+    <p class="muted">Remarque : en phase de test ou d’examen, Google peut afficher des annonces de test.</p>
+  </section>
 
-    <section id="modifs" class="card">
-      <h2>11. Modifications</h2>
-      <p>La présente politique peut être mise à jour. La date ci‑dessus sera modifiée et la nouvelle version sera publiée dans l’App.</p>
-    </section>
+  <section id="promo" class="card">
+    <h2>11. Promotion &amp; réseaux</h2>
+    <p>Nous pouvons présenter l’App et proposer des tests à la communauté via nos réseaux sociaux officiels (Instagram, TikTok, Facebook, YouTube). Aucun compte social n’est requis pour utiliser l’App.</p>
+  </section>
 
-    <section id="contact" class="card">
-      <h2>12. Contact</h2>
-      <p>Pour toute question ou demande relative à la confidentialité : <a href="mailto:s.alba.music.officiel@gmail.com">s.alba.music.officiel@gmail.com</a>.</p>
-    </section>
+  <section id="modifs" class="card">
+    <h2>12. Modifications</h2>
+    <p>La présente politique peut être mise à jour. La date ci‑dessus sera modifiée et la nouvelle version sera publiée dans l’App.</p>
+  </section>
 
-    <footer>© 2025 – Alba Music. Tous droits réservés.</footer>
-  </main>
+  <section id="contact" class="card">
+    <h2>13. Contact</h2>
+    <p>Pour toute question ou demande relative à la confidentialité : <a href="mailto:s.alba.music.officiel@gmail.com">s.alba.music.officiel@gmail.com</a>.</p>
+  </section>
+
+  <footer>© 2025 – Alba Music. Tous droits réservés.</footer>
+</main>
 </body>
 </html> 
